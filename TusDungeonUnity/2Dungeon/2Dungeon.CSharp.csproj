@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\IInputGesture.cs" />
     <Compile Include="Assets\Scripts\InputGestureManager.cs" />
     <Compile Include="Assets\Scripts\MainGesture.cs" />
+    <Compile Include="Assets\Scripts\MenuSlider.cs" />
     <Compile Include="Assets\Scripts\Operater.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\RepeatButton.cs" />

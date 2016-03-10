@@ -6,7 +6,7 @@ namespace Actor
     public class Player : MonoBehaviour
     {
         Operater operater;
-        float speed = 1f;
+        public float speed = 0.01f;
         // Use this for initialization
         void Start()
         {

@@ -41,6 +41,18 @@ namespace Actor
 
         public void OnGestureDown(GestureInfo info)
         {
+            Vector3 aTapPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D aCollider2d = Physics2D.OverlapPoint(aTapPoint);
+
+            if (aCollider2d)
+            {
+                GameObject obj = aCollider2d.transform.gameObject;
+                NPC npc = obj.GetComponent<NPC>();
+                if (npc!=null)
+                {
+                    npc.OnTap();
+                }
+            }
         }
 
         public void OnGestureUp(GestureInfo info)

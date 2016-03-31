@@ -32,22 +32,22 @@ namespace Actor
 
             if (direction.x > direction.y)
             {
-                if (direction.x < 0)
-                {
-                    trig = 2;
-                }
-                if (direction.x > 0)
+                if (direction.x < -direction.y)
                 {
                     trig = 4;
+                }
+                if(direction.x>-direction.y)
+                {
+                    trig = 3;
                 }
             }
             if (direction.y > direction.x)
             {
-                if (direction.y < 0)
+                if (direction.y < -direction.x)
                 {
-                    trig = 3;
+                    trig = 2;
                 }
-                if (direction.y > 0)
+                if (direction.y > -direction.x)
                 {
                     trig = 1;
                 }

@@ -27,33 +27,11 @@ namespace Actor
 
         public void Move(Vector3 direction)
         {
-            int trig = 0;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(speed*direction.x,speed*direction.y);
-
-            if (direction.x > direction.y)
-            {
-                if (direction.x < -direction.y)
-                {
-                    trig = 4;
-                }
-                if(direction.x>-direction.y)
-                {
-                    trig = 3;
-                }
-            }
-            if (direction.y > direction.x)
-            {
-                if (direction.y < -direction.x)
-                {
-                    trig = 2;
-                }
-                if (direction.y > -direction.x)
-                {
-                    trig = 1;
-                }
-            }
-
-            anim.SetInteger("MoveDire",trig);
+            Vector2 vel= new Vector2(0,0);
+            vel = new Vector2(speed*direction.x,speed*direction.y);
+            GetComponent<Rigidbody2D>().velocity = vel;
+            anim.SetFloat("x_vel", vel.x);
+            anim.SetFloat("y_vel", vel.y);
             Debug.Log(GetComponent<Rigidbody2D>().velocity);
 
         }

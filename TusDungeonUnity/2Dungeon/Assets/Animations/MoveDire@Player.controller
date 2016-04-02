@@ -13,19 +13,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: x_vel
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: y_vel
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -46,9 +46,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 3
+  - m_ConditionMode: 4
+    m_ConditionEvent: y_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110259290}
   m_Solo: 0
@@ -70,9 +70,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 4
+  - m_ConditionMode: 3
+    m_ConditionEvent: x_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110271280}
   m_Solo: 0
@@ -94,9 +94,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 2
+  - m_ConditionMode: 4
+    m_ConditionEvent: x_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110201570}
   m_Solo: 0
@@ -118,9 +118,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 4
+  - m_ConditionMode: 3
+    m_ConditionEvent: x_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110271280}
   m_Solo: 0
@@ -142,9 +142,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 1
+  - m_ConditionMode: 3
+    m_ConditionEvent: y_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110243880}
   m_Solo: 0
@@ -166,9 +166,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 3
+  - m_ConditionMode: 4
+    m_ConditionEvent: y_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110259290}
   m_Solo: 0
@@ -190,9 +190,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 2
+  - m_ConditionMode: 4
+    m_ConditionEvent: x_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110201570}
   m_Solo: 0
@@ -214,9 +214,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 3
+  - m_ConditionMode: 4
+    m_ConditionEvent: y_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110259290}
   m_Solo: 0
@@ -238,9 +238,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 1
+  - m_ConditionMode: 3
+    m_ConditionEvent: y_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110243880}
   m_Solo: 0
@@ -262,9 +262,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 2
+  - m_ConditionMode: 4
+    m_ConditionEvent: x_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110201570}
   m_Solo: 0
@@ -286,9 +286,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 4
+  - m_ConditionMode: 3
+    m_ConditionEvent: x_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110271280}
   m_Solo: 0
@@ -310,9 +310,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 1
+  - m_ConditionMode: 3
+    m_ConditionEvent: y_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110243880}
   m_Solo: 0
@@ -334,9 +334,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 1
+  - m_ConditionMode: 3
+    m_ConditionEvent: y_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110243880}
   m_Solo: 0
@@ -358,9 +358,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 2
+  - m_ConditionMode: 4
+    m_ConditionEvent: x_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110201570}
   m_Solo: 0
@@ -382,9 +382,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 4
+  - m_ConditionMode: 3
+    m_ConditionEvent: x_vel
+    m_EventTreshold: 0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110271280}
   m_Solo: 0
@@ -406,9 +406,9 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 6
-    m_ConditionEvent: MoveDire
-    m_EventTreshold: 3
+  - m_ConditionMode: 4
+    m_ConditionEvent: y_vel
+    m_EventTreshold: -0.001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110259290}
   m_Solo: 0

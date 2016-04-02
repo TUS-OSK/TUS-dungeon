@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DoorManager : MonoBehaviour {
 
-    public string NextScene;
+    public GameObject NextBeacon;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +15,6 @@ public class DoorManager : MonoBehaviour {
 	
 	}
 
-    void MoveScene() {
-        Application.LoadLevel(NextScene);
+    void MoveNext() {
     }
 }

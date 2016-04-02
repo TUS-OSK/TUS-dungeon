@@ -6,14 +6,13 @@ namespace Actor
     public class Player : MonoBehaviour
     {
         Animator anim;
-        Operater operater;
+
         public float speed = 0.01f;
 
 
         // Use this for initialization
         void Start()
         {
-            this.operater = new Operater();
             this.anim = GetComponent<Animator>();
         }
 

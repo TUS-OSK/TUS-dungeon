@@ -19,8 +19,8 @@ namespace Actor
 
         void Start()
         {
-            var json = "{\"body\":[{\"problem\":\"東京理科大学の前身の名前は何でしょう\",\"choice\":[\"東京物理学校\",\"東京科学学校\",\"東京化学学校\",\"東京理科学校\"]},{\"problem\":\"東京理科大学の略称は何でしょう？\",\"choice\":[\"TUS\",\"TRD\",\"TDR\",\"TDN\"]}]}";
-            quizlist = JsonUtility.FromJson<QuizList>(json);
+            var textAsset = Resources.Load("QuizList") as TextAsset;
+            quizlist = JsonUtility.FromJson<QuizList>(textAsset.text);
             
             Debug.Log(quizlist.body[0].choice[0]);
         }

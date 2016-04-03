@@ -11,7 +11,6 @@ namespace Actor
     {
         QuizList quizlist;
         public GameObject quizpanel;
-        private NPC npc;
         
         TextReader txtReader;
         string description;
@@ -33,7 +32,7 @@ namespace Actor
 
         }
 
-        public void MakeQuiz(CharType ct, NPC npc)
+        public void MakeQuiz(CharType ct)
         {
             //    Quiz quiz = new Quiz();
             //    quiz.problem = "Qust1";
@@ -43,8 +42,6 @@ namespace Actor
             //    quiz.choice[3] = "D";
 
             var quiz = quizlist.body[1];
-            Debug.Log(quiz);
-            this.npc = npc;
             QuizPanel qp = quizpanel.GetComponent<QuizPanel>();
             qp.MoveIn(quiz);
         }
@@ -61,14 +58,12 @@ namespace Actor
         public string start;
         public string correct;
         public string wrong;
-        public string[] choice; 
-        //public string[] choice { get; set; }
+        public string[] choice;
     }
 
     [Serializable]
     public class QuizList
     {
         public List<Quiz> body;
-        //public Quiz[] body { get; set; }
     }
 }

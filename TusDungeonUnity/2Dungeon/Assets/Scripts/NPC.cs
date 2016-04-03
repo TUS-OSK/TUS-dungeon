@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 namespace Actor
 {
     public class NPC : MonoBehaviour {
@@ -25,11 +24,11 @@ namespace Actor
             mm.WriteNameMassage(this.name);
             mm.WriteTalkMassage(talk);
             QuizManeger qm = QuizManeger.GetComponent<QuizManeger>();
-            qm.MakeQuiz(ct,this);
+            qm.MakeQuiz(ct);
         }
         
 
     }
 
-    public enum CharType {man,woman,prof }
+    public enum CharType {man,woman,professor}
 }

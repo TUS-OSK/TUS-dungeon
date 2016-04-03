@@ -51,6 +51,9 @@ TagManager:
   - name: backgroung
     uniqueID: 2273094599
     locked: 0
+  - name: NPCs
+    uniqueID: 2146644469
+    locked: 0
   - name: player
     uniqueID: 25081919
     locked: 0

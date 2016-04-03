@@ -17,7 +17,7 @@ namespace Actor
         public GameObject buttonLD;
 
         public GameObject MessageManager;
-        public GameObject NPC;
+        public GameObject QuizManeger;
 
         public string[] choice;
 
@@ -88,15 +88,16 @@ namespace Actor
 
         public void MoveOut(int ans)
         {
+            QuizManeger qm = QuizManeger.GetComponent<QuizManeger>();
             if (ans==colans)
             {
                 //正解
-                NPC.GetComponent<NPC>().ColTalkMessage();
+                qm.QuizTorF(true);
             }
             else
             {
                 //ハズレ
-                NPC.GetComponent<NPC>().BadTalkMessage();
+                qm.QuizTorF(false);
             }
 
             StartCoroutine(Wait(1.0f));

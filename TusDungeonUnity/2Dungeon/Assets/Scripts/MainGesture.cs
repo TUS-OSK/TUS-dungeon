@@ -26,7 +26,7 @@ namespace Actor
         }
         public void DisableGesture()
         {
-            InputGestureManager.Instance.UnregisterGesture(this);
+            //InputGestureManager.Instance.UnregisterGesture(this);
         }
 
         public int Order

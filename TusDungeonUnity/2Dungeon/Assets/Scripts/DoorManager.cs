@@ -15,6 +15,11 @@ public class DoorManager : MonoBehaviour {
 	
 	}
 
-    void MoveNext() {
+    void OnCollisionEnter2D(Collision2D col)
+    { 
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<Transform>().position=NextBeacon.GetComponent<Transform>().position;
+        }
     }
 }

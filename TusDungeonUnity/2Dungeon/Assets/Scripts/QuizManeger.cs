@@ -9,6 +9,7 @@ namespace Actor
     {
         QuizList quizlist;
         public GameObject quizpanel;
+        private NPC npc;
 
         // Use this for initialization
         void Start()
@@ -21,7 +22,7 @@ namespace Actor
 
         }
 
-        public void MakeQuiz(int level)
+        public void MakeQuiz(int level,NPC npc)
         {
             //return quizlist.body[(int)UnityEngine.Random.value];
             Quiz quiz = new Quiz();
@@ -30,11 +31,22 @@ namespace Actor
             quiz.choice[1] = "B";
             quiz.choice[2] = "C";
             quiz.choice[3] = "D";
-            
+
+            this.npc = npc;
             QuizPanel qp = quizpanel.GetComponent<QuizPanel>();
             qp.MoveIn(quiz);
+        }
 
-
+        public void QuizTorF(bool isCol) {
+            NPC n = npc.GetComponent<NPC>();
+            if (isCol)
+            {
+                n.ColTalkMessage();
+            }
+            else
+                    {
+                n.BadTalkMessage();
+            }
         }
         
 

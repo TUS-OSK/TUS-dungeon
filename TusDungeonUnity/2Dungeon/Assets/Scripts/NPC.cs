@@ -26,7 +26,7 @@ namespace Actor
             mm.WriteNameMassage(this.name);
             mm.WriteTalkMassage(talk);
             QuizManeger qm = QuizManeger.GetComponent<QuizManeger>();
-            qm.MakeQuiz(1);
+            qm.MakeQuiz(1,this);
         }
 
         public void ColTalkMessage()

@@ -45,6 +45,9 @@ TagManager:
   - name: none
     uniqueID: 3366028001
     locked: 0
+  - name: Black
+    uniqueID: 871786703
+    locked: 0
   - name: backgroung
     uniqueID: 2273094599
     locked: 0

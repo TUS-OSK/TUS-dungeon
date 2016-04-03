@@ -20,11 +20,15 @@ namespace Actor
         }
 
         public void OnTap() {
+            if (this.GetComponent<BoxCollider2D>().IsTouching(GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>()))
+            {
             MessageManager mm = MessageManager.GetComponent<MessageManager>();
             mm.WriteNameMassage(this.name);
             mm.WriteTalkMassage(talk);
             QuizManeger qm = QuizManeger.GetComponent<QuizManeger>();
             qm.MakeQuiz(ct);
+
+            }
         }
         
 

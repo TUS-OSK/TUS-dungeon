@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using System.Collections;
+
 
 namespace Actor
 {
@@ -10,11 +12,20 @@ namespace Actor
         QuizList quizlist;
         public GameObject quizpanel;
         private NPC npc;
+        
+        TextReader txtReader;
+        string description;
 
         // Use this for initialization
+
         void Start()
         {
+            var json = "{\"body\":[{\"problem\":\"東京理科大学の前身の名前は何でしょう\",\"choice\":[\"東京物理学校\",\"東京科学学校\",\"東京化学学校\",\"東京理科学校\"]},{\"problem\":\"東京理科大学の略称は何でしょう？\",\"choice\":[\"TUS\",\"TRD\",\"TDR\",\"TDN\"]}]}";
+            quizlist = JsonUtility.FromJson<QuizList>(json);
+            
+            Debug.Log(quizlist.body[0].choice[0]);
         }
+        
 
         // Update is called once per frame
         void Update()
@@ -22,55 +33,42 @@ namespace Actor
 
         }
 
-        public void MakeQuiz(int level,NPC npc)
+        public void MakeQuiz(CharType ct, NPC npc)
         {
-            //return quizlist.body[(int)UnityEngine.Random.value];
-            Quiz quiz = new Quiz();
-            quiz.problem = "Qust1";
-            quiz.choice[0] = "A";
-            quiz.choice[1] = "B";
-            quiz.choice[2] = "C";
-            quiz.choice[3] = "D";
+            //    Quiz quiz = new Quiz();
+            //    quiz.problem = "Qust1";
+            //    quiz.choice[0] = "A";
+            //    quiz.choice[1] = "B";
+            //    quiz.choice[2] = "C";
+            //    quiz.choice[3] = "D";
 
+            var quiz = quizlist.body[1];
+            Debug.Log(quiz);
             this.npc = npc;
             QuizPanel qp = quizpanel.GetComponent<QuizPanel>();
             qp.MoveIn(quiz);
         }
-
-        public void QuizTorF(bool isCol) {
-            NPC n = npc.GetComponent<NPC>();
-            if (isCol)
-            {
-                n.ColTalkMessage();
-            }
-            else
-                    {
-                n.BadTalkMessage();
-            }
-        }
         
 
-        
+
+
     }
 
     [Serializable]
     public class Quiz
     {
-        public string problem { get; set; }
-        public string[] choice { get; set; }
-        public Quiz() {
-            choice = new string[] { "A", "B", "C", "D" };
-        }
+        public string problem;
+        public string start;
+        public string correct;
+        public string wrong;
+        public string[] choice; 
+        //public string[] choice { get; set; }
     }
 
     [Serializable]
     public class QuizList
     {
-        public Quiz[] body { get; set; }
-
-        public QuizList()
-        {
-            body = new Quiz[100];
-        }
+        public List<Quiz> body;
+        //public Quiz[] body { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace Actor
     public class QuizPanel : MonoBehaviour
     {
         private int colans;
+        private Quiz quiz;
 
         public Vector3 InPosition;
         public Vector3 OutPosition;
@@ -51,6 +52,10 @@ namespace Actor
             if (col == quiz.choice[3])
                 colans = 3;
             SetText("ButtonLD", quiz.choice[3]);
+
+            this.quiz = quiz;
+            MessageManager mm = MessageManager.GetComponent<MessageManager>();
+            mm.WriteTalkMassage(quiz.problem);
         }
 
 
@@ -64,6 +69,7 @@ namespace Actor
                 deck[randomIndex] = temp;
             }
         }
+
 
         public void SetText(string name, string text)
         {
@@ -88,16 +94,17 @@ namespace Actor
 
         public void MoveOut(int ans)
         {
-            QuizManeger qm = QuizManeger.GetComponent<QuizManeger>();
+            MessageManager mm = MessageManager.GetComponent<MessageManager>();
             if (ans==colans)
             {
                 //正解
-                qm.QuizTorF(true);
+                mm.WriteTalkMassage(quiz.correct);
             }
             else
             {
                 //ハズレ
-                qm.QuizTorF(false);
+                mm.WriteTalkMassage(quiz.wrong);
+                
             }
 
             StartCoroutine(Wait(1.0f));

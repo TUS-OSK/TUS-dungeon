@@ -8,8 +8,7 @@ namespace Actor
         public GameObject MessageManager;
         public GameObject QuizManeger;
 
-        public string ColTalk = "正解";
-        public string BadTalk = "ハズレ";
+        public CharType ct;
 
         // Use this for initialization
         void Start() {
@@ -26,20 +25,11 @@ namespace Actor
             mm.WriteNameMassage(this.name);
             mm.WriteTalkMassage(talk);
             QuizManeger qm = QuizManeger.GetComponent<QuizManeger>();
-            qm.MakeQuiz(1,this);
+            qm.MakeQuiz(ct,this);
         }
-
-        public void ColTalkMessage()
-        {
-            MessageManager mm = MessageManager.GetComponent<MessageManager>();
-            mm.WriteTalkMassage(ColTalk);
-        }
-
-        public void BadTalkMessage()
-        {
-            MessageManager mm = MessageManager.GetComponent<MessageManager>();
-            mm.WriteTalkMassage(BadTalk);
-        }
+        
 
     }
+
+    public enum CharType {man,woman,prof }
 }

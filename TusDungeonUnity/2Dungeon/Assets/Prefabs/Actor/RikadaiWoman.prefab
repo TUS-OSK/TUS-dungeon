@@ -55,10 +55,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3805ca7cbae2aa7438af154e802a68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talk: hello!
-  MessageManager: {fileID: 0}
-  QuizManeger: {fileID: 0}
-  ct: 0
+  talk: "\u3082\u3046\u30AF\u30A4\u30BA\u51FA\u3057\u305F\u3058\u3083\u3093"
+  ct: 1
 --- !u!212 &21291694
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -95,7 +93,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: ct
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: talk
+      value: "\u3082\u3046\u30AF\u30A4\u30BA\u51FA\u3057\u305F\u3058\u3083\u3093"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159574}

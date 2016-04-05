@@ -11,9 +11,13 @@ namespace Actor
     {
         QuizList quizlist;
         public GameObject quizpanel;
+        public GameObject Player;
+        public GameObject StatusPanel;
         
         TextReader txtReader;
         string description;
+
+        int Score;
 
         // Use this for initialization
 
@@ -21,8 +25,7 @@ namespace Actor
         {
             var textAsset = Resources.Load("QuizList") as TextAsset;
             quizlist = JsonUtility.FromJson<QuizList>(textAsset.text);
-            
-            Debug.Log(quizlist.body[0].choice[0]);
+            Score = 0;
         }
         
 
@@ -34,19 +37,25 @@ namespace Actor
 
         public void MakeQuiz(CharType ct)
         {
-            //    Quiz quiz = new Quiz();
-            //    quiz.problem = "Qust1";
-            //    quiz.choice[0] = "A";
-            //    quiz.choice[1] = "B";
-            //    quiz.choice[2] = "C";
-            //    quiz.choice[3] = "D";
-
-            var quiz = quizlist.body[1];
+            Player.GetComponent<Player>().isMove = false;
+            int n= UnityEngine.Random.Range(0,quizlist.body.Count-1);
+            var quiz = quizlist.body[n];
+            quizlist.body.Remove(quiz);
             QuizPanel qp = quizpanel.GetComponent<QuizPanel>();
-            qp.MoveIn(quiz);
+            qp.RendQuiz(quiz);
+        }
+
+        public void EndQuiz()
+        {
+            StatusPanel.GetComponent<StatusPanel>().WriteScore(Score);
+            
+            Player.GetComponent<Player>().isMove = true;
         }
         
-
+        public void CCincrement()
+        {
+            Score++;
+        }
 
 
     }

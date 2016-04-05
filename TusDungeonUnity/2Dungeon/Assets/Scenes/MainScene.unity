@@ -9400,7 +9400,7 @@ Prefab:
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c5fc5cbca96f74ec5ae866e3b767e145,
+      objectReference: {fileID: 21300000, guid: 21b79a5d8e1a6469482fc673f3ea939a,
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location

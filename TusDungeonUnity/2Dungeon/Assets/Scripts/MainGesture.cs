@@ -8,7 +8,6 @@ namespace Actor
         private Camera mainCamera;
         private GameObject player;
         public InputGestureManager IGM;
-        public MessageManager messagemanager;
 
         void Awake()
         {
@@ -48,13 +47,11 @@ namespace Actor
             if (aCollider2d)
             {
                 GameObject obj = aCollider2d.transform.gameObject;
-                Debug.Log(obj.name);
                 NPC npc = obj.GetComponent<NPC>();
                 if (npc!=null)
                 {
                     npc.OnTap();
                 }
-                messagemanager.OnTap();
             }
         }
 

@@ -22,6 +22,7 @@ public class BackGroundManager : MonoBehaviour {
         {
             LocationPanel lp = GameObject.Find("LocationPanel").GetComponent<LocationPanel>();
             lp.ChangeLocation(location);
+            Debug.Log(location);
         }
     }
 }

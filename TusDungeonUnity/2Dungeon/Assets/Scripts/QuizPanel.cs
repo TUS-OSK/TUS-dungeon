@@ -35,6 +35,12 @@ namespace Actor
 
         }
 
+        public void RendQuiz(Quiz quiz)
+        {
+            MessageManager mm = MessageManager.GetComponent<MessageManager>();
+            mm.WriteTalkMessage(quiz);
+        }
+
         public void MoveIn(Quiz quiz)
         {
             this.GetComponent<Transform>().localPosition = InPosition;
@@ -55,7 +61,7 @@ namespace Actor
 
             this.quiz = quiz;
             MessageManager mm = MessageManager.GetComponent<MessageManager>();
-            mm.WriteTalkMassage(quiz.problem);
+            mm.WriteTalkMessage(quiz.problem);
         }
 
 
@@ -98,22 +104,22 @@ namespace Actor
             if (ans==colans)
             {
                 //正解
-                mm.WriteTalkMassage(quiz.correct);
+                mm.WriteTalkMessage(quiz.correct);
             }
             else
             {
                 //ハズレ
-                mm.WriteTalkMassage(quiz.wrong);
-                
+                mm.WriteTalkMessage(quiz.wrong);
             }
-
             StartCoroutine(Wait(1.0f));
+
         }
 
         private IEnumerator Wait(float time)
         {
             yield return new WaitForSeconds(time);
             transform.localPosition = OutPosition;
+            QuizManeger.GetComponent<QuizManeger>().EndQuiz();
         }
     }
 }

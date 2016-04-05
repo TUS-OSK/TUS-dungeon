@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21295864}
   - 61: {fileID: 6175066}
   - 114: {fileID: 11430928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kyouju
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3805ca7cbae2aa7438af154e802a68a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talk: hello!
+  talk: "\u3082\u3046\u79C1\u306E\u5206\u306E\u30AF\u30A4\u30BA\u306F\u51FA\u984C\u6E08\u307F\u3060"
   MessageManager: {fileID: 0}
   QuizManeger: {fileID: 0}
   ct: 0
@@ -95,7 +95,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: talk
+      value: "\u3082\u3046\u79C1\u306E\u5206\u306E\u30AF\u30A4\u30BA\u306F\u51FA\u984C\u6E08\u307F\u3060"
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 136796}

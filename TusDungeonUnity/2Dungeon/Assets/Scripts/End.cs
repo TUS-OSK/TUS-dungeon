@@ -17,5 +17,10 @@ namespace Actor {
         void Update() {
 
         }
+
+        public void ReStart()
+        {
+            Application.LoadLevel("StartScene");
+        }
     }
 }

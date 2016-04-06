@@ -14,6 +14,7 @@ namespace Actor
         public GameObject QuizPanel;
         bool isCon;
         Quiz quiz;
+        private string temp;
 
         // Use this for initialization
         void Start()
@@ -46,6 +47,8 @@ namespace Actor
 
         public void OnTap()
         {
+            temp = TalkMassage.GetComponent<Text>().text;
+            StartCoroutine(WaitRead(3.0f,temp));
             if (isCon)
             {
                 StartCoroutine(Wait(1.0f));
@@ -57,6 +60,15 @@ namespace Actor
         {
             yield return new WaitForSeconds(time);
             QuizPanel.GetComponent<QuizPanel>().MoveIn(quiz);
+        }
+
+        private IEnumerator WaitRead(float time,string temp2)
+        {
+            yield return new WaitForSeconds(time);
+            if (temp==temp2)
+            {
+                TalkMassage.GetComponent<Text>().text = " ";
+            }
         }
     }
 

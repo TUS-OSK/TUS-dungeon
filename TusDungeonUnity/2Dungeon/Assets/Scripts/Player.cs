@@ -8,7 +8,8 @@ namespace Actor
         Animator anim;
         public bool isMove;
         public float speed = 0.01f;
-
+        public float MaxSpeedX = 3.0f;
+        public float MaxSpeedY = 3.0f;
 
         // Use this for initialization
         void Start()
@@ -35,6 +36,14 @@ namespace Actor
 
                 Vector2 vel = new Vector2(0, 0);
                 vel = new Vector2(speed * direction.x, speed * direction.y);
+                if (vel.x>MaxSpeedX)
+                {
+                    vel.x = MaxSpeedX;
+                }
+                if (vel.y > MaxSpeedY)
+                {
+                    vel.y = MaxSpeedY;
+                }
                 GetComponent<Rigidbody2D>().velocity = vel;
                 anim.speed = 1;
                 int dir = 0;

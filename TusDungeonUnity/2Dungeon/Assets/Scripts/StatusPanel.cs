@@ -31,14 +31,20 @@ public class StatusPanel : MonoBehaviour
         if (score >= 10)
             nm = "情弱理科大生";
         if (score >= 20)
-            nm = "普通の理科大生";
+            nm = "ぼっち理科大生";
         if (score >= 30)
-            nm = "リア充理科大生";
+            nm = "普通の理科大生";
         if (score >= 40)
-            nm = "エリート理科大生";
+            nm = "リア充理科大生";
         if (score >= 50)
+            nm = "情強理科大生";
+        if (score >= 60)
+            nm = "エリート理科大生";
+        if (score >= 70)
+            nm = "理科大通";
+        if (score >= 80)
             nm = "理科大マニア";
-        if (score >= 55)
+        if (score >= 85)
             nm = "理科大エキスパート";
 
         SetText("NickName", nm);

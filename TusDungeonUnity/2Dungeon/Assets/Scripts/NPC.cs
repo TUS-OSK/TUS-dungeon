@@ -35,7 +35,7 @@ namespace Actor
                 {
                     MessageManager mm = MessageManager.GetComponent<MessageManager>();
                     mm.WriteNameMassage(this.name);
-                    QuizManeger qm = this.QuizManager.GetComponent<QuizManeger>();
+                    QuizManager qm = this.QuizManager.GetComponent<QuizManager>();
                     qm.MakeQuiz(this,ct);
                     isQuized = false;
                 }

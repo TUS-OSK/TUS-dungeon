@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace Actor
 {
-    internal class QuizManeger : MonoBehaviour
+    internal class QuizManager : MonoBehaviour
     {
         QuizList quizlist;
         public GameObject quizpanel;
@@ -46,6 +46,7 @@ namespace Actor
             quizlist.body.Remove(quiz);
             QuizPanel qp = quizpanel.GetComponent<QuizPanel>();
             qp.RendQuiz(quiz);
+            
         }
 
         public void EndQuiz()
@@ -58,6 +59,11 @@ namespace Actor
         public void CCincrement()
         {
             Score++;
+        }
+
+        public int GetScore()
+        {
+            return this.Score;
         }
 
 

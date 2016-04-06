@@ -101,7 +101,7 @@ namespace Actor
         public void MoveOut(int ans)
         {
             MessageManager mm = MessageManager.GetComponent<MessageManager>();
-            QuizManeger qm = QuizManeger.GetComponent<QuizManeger>();
+            QuizManager qm = QuizManeger.GetComponent<QuizManager>();
             if (ans==colans)
             {
                 //正解
@@ -121,7 +121,7 @@ namespace Actor
         {
             yield return new WaitForSeconds(time);
             transform.localPosition = OutPosition;
-            QuizManeger.GetComponent<QuizManeger>().EndQuiz();
+            QuizManeger.GetComponent<QuizManager>().EndQuiz();
         }
     }
 }

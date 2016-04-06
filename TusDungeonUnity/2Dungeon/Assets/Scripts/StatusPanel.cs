@@ -19,7 +19,7 @@ public class StatusPanel : MonoBehaviour
 
     public void WriteScore(int score)
     {
-        SetText("Score",score.ToString());
+        SetText("Score",(score*1000).ToString());
 
         string nm="新入生";
         if (score>=0)

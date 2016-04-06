@@ -5,9 +5,11 @@ using System.Collections;
 public class BackGroundManager : MonoBehaviour {
 
     public string location;
+    public Vector3 LeftUp=new Vector3(0,0,0);
+    public Vector3 RightDown = new Vector3(0, 0, 0);
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -16,12 +18,15 @@ public class BackGroundManager : MonoBehaviour {
 	
 	}
     
-    void OnTriggerEnter2D(Collider2D col)
+    void locationSync(Vector3 PlayerPosition)
     {
-        if (col.gameObject.tag == "Player")
+        if (LeftUp.x<PlayerPosition.x&&PlayerPosition.x<RightDown.x)
         {
-            LocationPanel lp = GameObject.Find("LocationPanel").GetComponent<LocationPanel>();
-            lp.ChangeLocation(location);
+            if (LeftUp.y > PlayerPosition.y && PlayerPosition.y > RightDown.y)
+            {
+                LocationPanel lp = GameObject.Find("LocationPanel").GetComponent<LocationPanel>();
+                lp.ChangeLocation(location);
+            }
         }
     }
 }

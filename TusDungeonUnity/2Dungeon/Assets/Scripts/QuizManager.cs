@@ -24,7 +24,7 @@ namespace Actor
 
         void Start()
         {
-            var textAsset = Resources.Load("QuizList") as TextAsset;
+            var textAsset = Resources.Load("QuizList1") as TextAsset;
             quizlist = JsonUtility.FromJson<QuizList>(textAsset.text);
             Score = 0;
             StatusPanel.GetComponent<StatusPanel>().WriteScore(Score);
@@ -58,7 +58,21 @@ namespace Actor
         
         public void CCincrement()
         {
-            Score++;
+            switch (npc.ct)
+            {
+                case CharType.man:
+                    Score++;
+                    break;
+                case CharType.woman:
+                    Score += 3;
+                    break;
+                case CharType.professor:
+                    Score += 2;
+                    break;
+                default:
+                    Score++;
+                    break;
+            }
         }
 
         public int GetScore()

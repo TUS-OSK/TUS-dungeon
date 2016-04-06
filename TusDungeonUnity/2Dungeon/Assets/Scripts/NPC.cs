@@ -10,6 +10,8 @@ namespace Actor
         private bool isQuized;
         public bool isQuizEnd;
 
+        public Sprite BackSprite;
+
         public CharType ct;
 
         // Use this for initialization
@@ -50,6 +52,10 @@ namespace Actor
                     mm.WriteTalkMessage(talk);
                 }
             }
+        }
+
+        public void SpriteChange(bool isBack) {
+            this.GetComponent<SpriteRenderer>().sprite = BackSprite;
         }
 
 

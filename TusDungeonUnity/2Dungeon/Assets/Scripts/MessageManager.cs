@@ -48,10 +48,10 @@ namespace Actor
         public void OnTap()
         {
             temp = TalkMassage.GetComponent<Text>().text;
-            StartCoroutine(WaitRead(3.0f,temp));
+            //StartCoroutine(WaitRead(deleteTime,temp));
             if (isCon)
             {
-                StartCoroutine(Wait(1.0f));
+                StartCoroutine(Wait(3.0f));
                 isCon = false;
             }
         }

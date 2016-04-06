@@ -926,7 +926,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF18\u53F7\u9928\uFF12F\uFF08\u5B66\u751F\u98DF\u5802\uFF09"
+      value: "\uFF18\u53F7\u9928\uFF12\u968E\uFF08\u5B66\u751F\u98DF\u5802\uFF09"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -2776,7 +2776,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF18\u53F7\u9928\uFF15F"
+      value: "\uFF18\u53F7\u9928\uFF15\u968E"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -3929,8 +3929,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a1e91a1fe3c231340b565b03d84789af, type: 3}
-    m_FontSize: 40
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -5018,7 +5018,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 1.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5316,7 +5316,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -6174,7 +6173,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF18\u53F7\u9928\uFF13F"
+      value: "\uFF18\u53F7\u9928\uFF13\u968E"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -12953,7 +12952,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF12\u53F7\u9928\uFF12F"
+      value: "\uFF12\u53F7\u9928\uFF12\u968E"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -16016,7 +16015,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF12\u53F7\u9928\uFF11F"
+      value: "\uFF12\u53F7\u9928\uFF11\u968E"
       objectReference: {fileID: 0}
     - target: {fileID: 197142, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_Name
@@ -16997,7 +16996,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF18\u53F7\u9928\uFF11F\uFF08\u5B66\u751F\u98DF\u5802\uFF09"
+      value: "\uFF18\u53F7\u9928\uFF11\u968E\uFF08\u5B66\u751F\u98DF\u5802\uFF09"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -17700,7 +17699,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF12\u53F7\u9928\uFF14F"
+      value: "\uFF12\u53F7\u9928\uFF14\u968E"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -20762,7 +20761,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF12\u53F7\u9928\uFF13F"
+      value: "\uFF12\u53F7\u9928\uFF13\u968E"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -22458,8 +22457,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957253356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -54.75, y: 1.6, z: 0}
-  m_LocalScale: {x: 1.0605375, y: 0.6852187, z: 1}
+  m_LocalPosition: {x: -17.218, y: 3.93, z: 0}
+  m_LocalScale: {x: 0.3626855, y: 0.55280584, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -22642,7 +22641,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11413764, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: location
-      value: "\uFF18\u53F7\u9928\uFF14F"
+      value: "\uFF18\u53F7\u9928\uFF14\u968E"
       objectReference: {fileID: 0}
     - target: {fileID: 21224884, guid: 977ad66d9c4c7b543b47e478a95fb48a, type: 2}
       propertyPath: m_SortingLayerID
@@ -22741,11 +22740,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 406082, guid: d1299c832d463034b848dae823a4fa1b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -44.995293
+      value: -47.052
       objectReference: {fileID: 0}
     - target: {fileID: 406082, guid: d1299c832d463034b848dae823a4fa1b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.88593
+      value: 9.881
       objectReference: {fileID: 0}
     - target: {fileID: 406082, guid: d1299c832d463034b848dae823a4fa1b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -24052,11 +24051,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 406082, guid: d1299c832d463034b848dae823a4fa1b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -46.944218
+      value: -46.61
       objectReference: {fileID: 0}
     - target: {fileID: 406082, guid: d1299c832d463034b848dae823a4fa1b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.493843
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 406082, guid: d1299c832d463034b848dae823a4fa1b, type: 2}
       propertyPath: m_LocalPosition.z

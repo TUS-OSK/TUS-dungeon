@@ -89,7 +89,7 @@ namespace Actor
                         {
                             Text t = child2.GetComponent<Text>();
                             t.text = text;
-                            
+
                             return;
                         }
                     }
@@ -102,7 +102,17 @@ namespace Actor
         {
             MessageManager mm = MessageManager.GetComponent<MessageManager>();
             QuizManager qm = QuizManeger.GetComponent<QuizManager>();
-            if (ans==colans)
+
+
+
+            //foreach (Transform child in this.transform)
+            //{
+            //    Button b = child.GetComponent<Button>();
+            //    b.enabled = false;
+            //    return;
+            //}
+
+            if (ans == colans)
             {
                 //正解
                 qm.CCincrement();

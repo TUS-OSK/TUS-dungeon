@@ -82,6 +82,7 @@ namespace Actor
         {
             StatusPanel.GetComponent<StatusPanel>().WriteScore(Score);
             npc.isQuizEnd = true;
+            npc.SpriteChange(true);
             Player.GetComponent<Player>().isMove = true;
         }
         

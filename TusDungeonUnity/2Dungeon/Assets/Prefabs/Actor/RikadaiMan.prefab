@@ -43,7 +43,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: -0.00000023841858, y: -0.0000015497208}
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.6012964}
+  m_Size: {x: 0.4, y: 0.7}
 --- !u!114 &11420014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,6 +56,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   talk: "\u30AF\u30A4\u30BA\u306F\u3082\u3046\u51FA\u3057\u305F\u3088"
+  isQuizEnd: 0
+  BackSprite: {fileID: 21300000, guid: e2bce5e6a20fff7478f5d7ddc7f8a065, type: 3}
   ct: 0
 --- !u!212 &21226558
 SpriteRenderer:
@@ -98,6 +100,19 @@ Prefab:
       propertyPath: talk
       value: "\u30AF\u30A4\u30BA\u306F\u3082\u3046\u51FA\u3057\u305F\u3088"
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BackSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e2bce5e6a20fff7478f5d7ddc7f8a065,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 138118}

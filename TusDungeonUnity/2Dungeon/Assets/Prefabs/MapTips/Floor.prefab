@@ -41,6 +41,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: 
+  LeftUp: {x: 0, y: 0, z: 0}
+  RightDown: {x: 0, y: 0, z: 0}
 --- !u!212 &21224884
 SpriteRenderer:
   m_ObjectHideFlags: 1

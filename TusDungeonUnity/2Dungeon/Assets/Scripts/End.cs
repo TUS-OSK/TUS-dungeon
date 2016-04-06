@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Actor {
     public class End : MonoBehaviour {
@@ -10,7 +11,6 @@ namespace Actor {
 
             GameObject Goal = GameObject.Find("Goal");
             this.GetComponent<Text>().text = Goal.GetComponent<Goal>().GetNickName();
-            Destroy(Goal);
         }
 
         // Update is called once per frame

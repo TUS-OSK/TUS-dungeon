@@ -8,6 +8,7 @@ namespace Actor
         private GameObject MessageManager;
         private GameObject QuizManager;
         private bool isQuized;
+        public bool isQuizEnd;
 
         public CharType ct;
 
@@ -15,6 +16,7 @@ namespace Actor
         void Start()
         {
             isQuized = true;
+            isQuizEnd = false;
             MessageManager = GameObject.FindGameObjectWithTag("MessageManager");
             QuizManager = GameObject.FindGameObjectWithTag("QuizManager");
         }
@@ -34,16 +36,19 @@ namespace Actor
                     MessageManager mm = MessageManager.GetComponent<MessageManager>();
                     mm.WriteNameMassage(this.name);
                     QuizManeger qm = this.QuizManager.GetComponent<QuizManeger>();
-                    qm.MakeQuiz(ct);
+                    qm.MakeQuiz(this,ct);
                     isQuized = false;
                 }
 
             }
             else
             {
-                MessageManager mm = MessageManager.GetComponent<MessageManager>();
-                mm.WriteNameMassage(this.name);
-                mm.WriteTalkMessage(talk);
+                if (isQuizEnd)
+                {
+                    MessageManager mm = MessageManager.GetComponent<MessageManager>();
+                    mm.WriteNameMassage(this.name);
+                    mm.WriteTalkMessage(talk);
+                }
             }
         }
 

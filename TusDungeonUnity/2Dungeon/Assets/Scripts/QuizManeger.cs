@@ -13,6 +13,7 @@ namespace Actor
         public GameObject quizpanel;
         public GameObject Player;
         public GameObject StatusPanel;
+        private NPC npc;
         
         TextReader txtReader;
         string description;
@@ -26,6 +27,7 @@ namespace Actor
             var textAsset = Resources.Load("QuizList") as TextAsset;
             quizlist = JsonUtility.FromJson<QuizList>(textAsset.text);
             Score = 0;
+            StatusPanel.GetComponent<StatusPanel>().WriteScore(Score);
         }
         
 
@@ -35,8 +37,9 @@ namespace Actor
 
         }
 
-        public void MakeQuiz(CharType ct)
+        public void MakeQuiz(NPC npc,CharType ct)
         {
+            this.npc = npc;
             Player.GetComponent<Player>().isMove = false;
             int n= UnityEngine.Random.Range(0,quizlist.body.Count-1);
             var quiz = quizlist.body[n];
@@ -48,7 +51,7 @@ namespace Actor
         public void EndQuiz()
         {
             StatusPanel.GetComponent<StatusPanel>().WriteScore(Score);
-            
+            npc.isQuizEnd = true;
             Player.GetComponent<Player>().isMove = true;
         }
         

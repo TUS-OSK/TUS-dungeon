@@ -9,7 +9,9 @@ namespace Actor
 {
     internal class QuizManager : MonoBehaviour
     {
-        QuizList quizlist;
+        QuizList quizlistman;
+        QuizList quizlistwoman;
+        QuizList quizlistprof;
         public GameObject quizpanel;
         public GameObject Player;
         public GameObject StatusPanel;
@@ -24,8 +26,12 @@ namespace Actor
 
         void Start()
         {
-            var textAsset = Resources.Load("QuizList1") as TextAsset;
-            quizlist = JsonUtility.FromJson<QuizList>(textAsset.text);
+            var textAsset = Resources.Load("QuizListMan") as TextAsset;
+            quizlistman = JsonUtility.FromJson<QuizList>(textAsset.text);
+            textAsset = Resources.Load("QuizListWoman") as TextAsset;
+            quizlistwoman = JsonUtility.FromJson<QuizList>(textAsset.text);
+            textAsset = Resources.Load("QuizListProf") as TextAsset;
+            quizlistprof = JsonUtility.FromJson<QuizList>(textAsset.text);
             Score = 0;
             StatusPanel.GetComponent<StatusPanel>().WriteScore(Score);
         }
@@ -41,9 +47,32 @@ namespace Actor
         {
             this.npc = npc;
             Player.GetComponent<Player>().isMove = false;
-            int n= UnityEngine.Random.Range(0,quizlist.body.Count-1);
-            var quiz = quizlist.body[n];
-            quizlist.body.Remove(quiz);
+            int n = 0;
+            Quiz quiz;
+            
+            switch (ct)
+            {
+                case CharType.man:
+                    n = UnityEngine.Random.Range(0, quizlistman.body.Count - 1);
+                    quiz = quizlistman.body[n];
+                    quizlistman.body.Remove(quiz);
+                    break;
+                case CharType.woman:
+                    n = UnityEngine.Random.Range(0, quizlistwoman.body.Count - 1);
+                    quiz = quizlistwoman.body[n];
+                    quizlistwoman.body.Remove(quiz);
+                    break;
+                case CharType.professor:
+                    n = UnityEngine.Random.Range(0, quizlistprof.body.Count - 1);
+                    quiz = quizlistprof.body[n];
+                    quizlistprof.body.Remove(quiz);
+                    break;
+                default:
+                    n = UnityEngine.Random.Range(0, quizlistman.body.Count - 1);
+                    quiz = quizlistman.body[n];
+                    quizlistman.body.Remove(quiz);
+                    break;
+            }
             QuizPanel qp = quizpanel.GetComponent<QuizPanel>();
             qp.RendQuiz(quiz);
             

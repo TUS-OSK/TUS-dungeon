@@ -25,6 +25,8 @@ public class DoorManager : MonoBehaviour {
                 col.gameObject.GetComponent<Transform>().position = NextDoor.GetComponent<Transform>().position;
                 NextDoor.GetComponent<DoorManager>().isAct = false;
                 NextDoor.GetComponent<Collider2D>().isTrigger = true;
+
+                StartCoroutine(ChangeLocation(0.5f));
             }
         }
     }
@@ -36,5 +38,12 @@ public class DoorManager : MonoBehaviour {
             isAct = true;
             this.GetComponent<Collider2D>().isTrigger = false;
         }
+    }
+
+    private IEnumerator ChangeLocation(float time)
+    {
+        yield return new WaitForSeconds(time);
+        StatusPanel sp = GameObject.FindGameObjectWithTag("StatusPanel").GetComponent<StatusPanel>();
+        sp.SerchLocation();
     }
 }

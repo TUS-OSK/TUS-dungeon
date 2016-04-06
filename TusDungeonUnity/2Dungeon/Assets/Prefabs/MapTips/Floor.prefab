@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11413764}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: BackGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,8 +41,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: 
-  LeftUp: {x: 0, y: 0, z: 0}
-  RightDown: {x: 0, y: 0, z: 0}
 --- !u!212 &21224884
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -99,6 +97,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: BackGround
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -20,7 +20,7 @@ namespace Actor {
 
         public void ReStart()
         {
-            Application.LoadLevel("StartScene");
+            SceneManager.LoadScene("StartScene");
         }
     }
 }

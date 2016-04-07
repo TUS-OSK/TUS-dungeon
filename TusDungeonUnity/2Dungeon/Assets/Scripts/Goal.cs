@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace Actor
 {
@@ -8,10 +9,7 @@ namespace Actor
 
         public Vector3 InPosition;
         public Vector3 OutPosition;
-
-        private GameObject MessageManager;
-        public GameObject YesNoPanel;
-        public GameObject QuizManager;
+        
         
 
         private static bool created = false;
@@ -34,7 +32,6 @@ namespace Actor
         // Use this for initialization
         void Start()
         {
-            MessageManager = GameObject.FindGameObjectWithTag("MessageManager");
         }
 
         // Update is called once per frame
@@ -45,19 +42,19 @@ namespace Actor
 
         void OnCollisionEnter2D(Collision2D col)
         {
-            MessageManager.GetComponent<MessageManager>().WriteTalkMessage("この先はゴールになっています。現在の成績で終了しますか？");
-            YesNoPanel.GetComponent<YesNoPanel>().MoveIn();
+            GameObject.FindGameObjectWithTag("MessageManager").GetComponent<MessageManager>().WriteTalkMessage("この先はゴールになっています。現在の成績で終了しますか？");
+            GameObject.FindGameObjectWithTag("YesNoPanel").GetComponent<YesNoPanel>().MoveIn();
         }
 
         public void OnTouchYes()
         {
-            this.score = QuizManager.GetComponent<QuizManager>().GetScore();
-            Application.LoadLevel("EndScene");
+            this.score = GameObject.FindGameObjectWithTag("QuizManager").GetComponent<QuizManager>().GetScore();
+            SceneManager.LoadScene("EndScene");
         }
 
         public void OnTouchNo()
         {
-            YesNoPanel.GetComponent<YesNoPanel>().MoveOut();
+            GameObject.FindGameObjectWithTag("YesNoPanel").GetComponent<YesNoPanel>().MoveOut();
         }
 
         public string GetNickName() {

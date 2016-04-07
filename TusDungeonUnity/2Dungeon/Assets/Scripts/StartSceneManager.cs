@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class SceneManager : MonoBehaviour {
+public class StartSceneManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,6 @@ public class SceneManager : MonoBehaviour {
 
     public void OnClickStart()
     {
-        Application.LoadLevel("MainScene");
+        SceneManager.LoadScene("MainScene");
     }
 }

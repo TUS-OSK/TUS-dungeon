@@ -5882,7 +5882,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -24235,7 +24234,7 @@ GameObject:
   - 114: {fileID: 1953119931}
   m_Layer: 5
   m_Name: YesNoPanel
-  m_TagString: Untagged
+  m_TagString: YesNoPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24406,8 +24405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InPosition: {x: 0, y: 50, z: 0}
   OutPosition: {x: 0, y: -500, z: 0}
-  YesNoPanel: {fileID: 1953119929}
-  QuizManager: {fileID: 153185877}
 --- !u!61 &1957253358
 BoxCollider2D:
   m_ObjectHideFlags: 0

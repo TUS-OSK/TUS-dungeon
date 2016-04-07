@@ -8,6 +8,7 @@ TagManager:
   - QuizManager
   - BackGround
   - StatusPanel
+  - YesNoPanel
   layers:
   - Default
   - TransparentFX
